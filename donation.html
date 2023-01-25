@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sovereign | Donation Page</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="donation.css" />
+    <script src="https://js.paystack.co/v2/popup.js"></script>
+    <script src="https://kit.fontawesome.com/2b90719479.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <nav>
+        <div class="container nav__container">
+            <img src="images.jpg/Logo.jpg" class="Logo" />
+            <a href="/">
+                <h4>SOVEREIGN GRACE INTERNATIONAL SCHOOL</h4>
+            </a>
+            <ul class="nav__menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donation.html">Donation</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <button id="close-menu-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </nav>
+    <!--==================== END OF NAVBAR ====================-->
+    <div class="paystack-color-bar"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 offset-md-4">
+                <div class="header">
+                    <div class="page-info">
+                        <h3 id="page-name" class="page-name">Donation Page</h3>
+                        <p class="company-name">
+                            BY
+                            <span id="company-name">Sovereign Grace International School</span>
+                        </p>
+                    </div>
+                    <div class="page-description">
+                        <span id="page-description">Payment page for donation rendered by the Sovereign Grace
+                            School</span>
+                    </div>
+                </div>
+                <form id="paymentForm" class="payment-form">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="element-label"><span>First Name</span></div>
+                                <input type="text" id="first-name" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <div class="element-label"><span>Last Name</span></div>
+                                <input type="text" id="last-name" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="element-label"><span>Email</span></div>
+                        <input type="text" id="email-address" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="element-label"><span>Currency</span></div>
+                                <select class="form-control">
+                                    <option value="USD">USD</option>
+                                    <option value="NGN">NGN</option>
+                                    <option value="GH¢">GH¢</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="element-label"><span>Donation Amount</span></div>
+                                <input type="text" id="amountv" onkeypress="return isNumber(event)"
+                                    class="form-control" />
+                                <input type="hidden" id="amount" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit">Pay Now</button>
+                        <div class="float-right">
+                            <h6>Total</h6>
+                            <h3 id="total"></h3>
+                        </div>
+                    </div>
+                </form>
+                <div id="paystack-footer" class="paystack-footer animated fadeIn">
+                    <a target="_blank" href="https://paystack.com/what-is-paystack">
+                        <img alt="Paystack secured badge"
+                            src="https://paystack.com/assets/payment/img/paystack-badge-cards.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="fotter">
+        <div class="container footer__container">
+            <div class="footer__1">
+                <a href="index.html" class="footer__logo">
+                    <h4>SCHOOL</h4>
+                </a>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+                    unde?
+                </p>
+            </div>
+
+            <div class="footer__2">
+                <h4>Permalinks</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__3">
+                <h4>Privacy</h4>
+                <ul class="privacy">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__4">
+                <h4>Contact Us</h4>
+                <div>
+                    <p>+233 242 089 133</p>
+                    <p>+233 553 205 274</p>
+                    <p>andydick212@gmail.com</p>
+                </div>
+
+                <ul class="footer__socials">
+                    <li>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__copyright">
+            <small>Copyright &copy; sovereign grace int'l school</small>
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
